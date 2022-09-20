@@ -1,17 +1,21 @@
-#include <stdio.h>
-void swap(int *, int *);
+#include<stdio.h>
+
+void swap(int *x, int *y)
+{
+
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
 int main()
 {
-    int x, y;
-    x = 10;
-    y = 20;
+    int x,y;
+    printf("Enter the 2 numbers you want to swap: ");
+    scanf("%d %d", &x, &y);
+
     swap(&x, &y);
-    printf("%d %d", x, y);
-}
-void swap(int *a, int *b)
-{
-    int temp;
-    temp = *a;
-    *a = *b;
-    *b = temp;
+    printf("The swapped numbers are %d %d: ", x,y);
+
 }

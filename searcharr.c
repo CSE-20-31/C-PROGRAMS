@@ -1,53 +1,45 @@
 #include<stdio.h>
-int main ()
+
+int main()
 {
+   int a[3][3];
+   int i,j;
+   int sum=0;
 
-   int arr[250], search, n, i;
+   printf("Enter the elements of the matrix: ");
 
-   printf("enter the size of array: ");
-
-   scanf("%d",&n);
-
-
-
-   printf("enter the elements of array: ");
+   for(i=0; i<=2; i++)
    {
-       for (i = 0; i < n; i++)
-         scanf("%d", &arr[i]);
-         }
-
-       for( i=0; i<n; i++)
-   {
-     printf("%d ", arr[i]);
-         }
-
-
-
-   printf("enter the number you want to search: ");
-
-   scanf("%d", &search);
-
-
-
-   for (i = 0; i < n; i++)
-
-   {
-
-      if (arr[i] == search)
-
+      for(j=0; j<=2; j++)
       {
-
-         printf("%d is present at %d th location: ", search, i);
-
-         break;
-
+         scanf("%d", &a[i][j]);
       }
 
    }
 
-   if (i == n)
+    for(i=0; i<=2; i++)
+   {
+      for(j=0; j<=2; j++)
+      {
+         printf("%d ", a[i][j]);
+      }
+      printf("\n");
 
-      printf("%d is not present in the array ", search);
+   }
+
+   for(i=0; i<=2; i++)
+   {
+      for(j=0; j<=2; j++)
+      {
+         if(i==j)
+         {
+
+             sum = sum + a[i][j];
+         }
+      }
+   }
+
+   printf("the sum of diagonal elements is %d", sum);
 
    return 0;
 
