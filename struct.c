@@ -29,7 +29,19 @@ int main()
         printf("%d \t %s \t %f \n", s[i].rollno, s[i].name, s[i].marks);
 
     }
+    int k =0, max;
 
+     max = s[0].marks;
+    for(i=1; i<n; i++)
+    {
+        if(max<s[i].marks)
+       {
+         max = s[i].marks;
+         k=i;
+       }
+
+    }
+    printf("The topper is %s with %f marks", s[k].name, s[k].marks);
 
 }
 
